@@ -58,7 +58,7 @@ def retrieve():
 
 
 def start():
-    in1=input("Hello Boss, what you want to do?\nPress \nL for lock\nR for retrieve\n")
+    in1=input("Hello Boss, what you want to do?\nPress \nL for log\nR for retrieve\n")
     if in1=='L' or in1=='l':
         lock()
     elif in1=='R' or in1=='r':
