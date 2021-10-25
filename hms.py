@@ -1,5 +1,5 @@
 def hms():
-    in1=input("Hello Boss, what you want to do?\nPress \nL for lock\nR for retrieve\n")
+    in1=input("Hello Boss, what you want to do?\nPress \nL for log\nR for retrieve\n")
     in2=int(input("What do you want to edit?\nPress\n1.Exercise\n2.Diet\n"))
     if in1=='L' or in1=='l':
         in3=int(input("Whom do you want to edit?\nPress\n1. Harry\n2. Rohan\n3. Rahul\n"))
