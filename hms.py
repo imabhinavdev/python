@@ -1,5 +1,10 @@
+import datetime
+
+
+def gettime():
+    return datetime.datetime.now()
 def hms():
-    in1=input("Hello Boss, what you want to do?\nPress \nL for lock\nR for retrieve\n")
+    in1=input("Hello Boss, what you want to do?\nPress \nL for log\nR for retrieve\n")
     in2=int(input("What do you want to edit?\nPress\n1.Exercise\n2.Diet\n"))
     if in1=='L' or in1=='l':
         in3=int(input("Whom do you want to edit?\nPress\n1. Harry\n2. Rohan\n3. Rahul\n"))
@@ -8,7 +13,7 @@ def hms():
         if in3==1 and in2==1:
             with open("harryex.txt","r+") as a:
                 in4=input("Enter exercise:\n")
-                a.write(in4)
+                a.write(str([str(gettime())]) ":"+  in4)
 
         elif in3==1 and in2==2:
             with open("harryd.txt","r+") as b:
