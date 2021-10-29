@@ -11,32 +11,42 @@ def hms():
 
 
         if in3==1 and in2==1:
-            with open("harryex.txt","r+") as a:
-                in4=input("Enter exercise:\n")
-                a.write(str([str(gettime())]) ":"+  in4)
+            def two():
+
+                with open("harryex.txt","r+") as a:
+                    in4=input("Enter exercise:\n")
+                    a.write(str([str(gettime())])+ in4)
+            two()
+            in11=input("Do you want to add more ? [1.Yes & 2.No]")
+            if in11==1:
+                if in11 == 1:
+                    while (in11 < 2):
+                        two()
+
+
 
         elif in3==1 and in2==2:
             with open("harryd.txt","r+") as b:
                 in5=input("Enter diet:\n")
-                b.write(str([str(gettime())]) ":"in5)
+                b.write(str([str(gettime())]),":"+in5)
 
         elif in3==2 and in2==1:
             with open("rohanex.txt","r+") as b:
                 in5=input("Enter exercise:\n")
-                b.write(str([str(gettime())]) ":"in5)
+                b.write(str([str(gettime())]), ":"+in5)
 
         elif in3==2 and in2==2:
             with open("rohand.txt","r+") as b:
                 in5=input("Enter diet:\n")
-                b.write(str([str(gettime())]) ":"in5)
+                b.write(str([str(gettime())]), ":"+in5)
         elif in3==3 and in2==1:
             with open("rahulex.txt","r+") as b:
                 in5=input("Enter exercise:\n")
-                b.write(str([str(gettime())]) ":"in5)
+                b.write(str([str(gettime())]) ,":"+in5)
         elif in3==3 and in2==2:
             with open("rahuld.txt","r+") as b:
                 in5=input("Enter diet:\n")
-                b.write(str([str(gettime())]) ":"in5)
+                b.write(str([str(gettime())]), ":"+in5)
     elif in1=='R' or in1=='r':
         in6 = int(input("Whom do you want to edit?\nPress\n1. Harry\n2. Rohan\n3. Rahul\n"))
         if in6==1 and in2==1:
