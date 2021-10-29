@@ -20,6 +20,13 @@ while i<10:
             print("Computer point", cp, "Your Point", hp)
             i+=1
             print("Rounds=",i)
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
+
 
       elif choice=="Paper" and in1==2 :
             print("Computer's choice is", choice)
@@ -28,6 +35,13 @@ while i<10:
             print("Computer point", cp, "Your Point", hp)
             i += 1
             print("Rounds=", i,"\n")
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
+
 
 
       elif choice=="Scissor" and in1==3 :
@@ -37,8 +51,15 @@ while i<10:
             print("Computer point", cp, "Your Point", hp)
             i += 1
             print("Rounds=", i,"\n")
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
 
-# wins statement
+
+      # wins statement
       elif choice=="Stone" and in1==3:
             print("Computer's choice is", choice)
             print("Your choice is Stone\n")
@@ -47,6 +68,13 @@ while i<10:
             print("Computer point",cp,"Your Point",hp)
             i += 1
             print("Rounds=", i,"\n")
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
+
 
       elif choice=="Scissor" and in1==2:
             print("Computer's choice is", choice)
@@ -56,6 +84,13 @@ while i<10:
             print("Computer point",cp,"Your Point",hp)
             i += 1
             print("Rounds=", i,"\n")
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
+
 
       elif choice=="Paper" and in1==1:
             print("Computer's choice is", choice)
@@ -65,6 +100,13 @@ while i<10:
             print("Computer point",cp,"Your Point",hp)
             i += 1
             print("Rounds=", i,"\n")
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
+
 
       elif choice=="Stone" and in1==2:
             print("Computer's choice is", choice)
@@ -74,6 +116,13 @@ while i<10:
             print("Computer point",cp,"Your Point",hp)
             i += 1
             print("Rounds=", i,"\n")
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
+
 
       elif choice=="Paper" and in1==3:
             print("Computer's choice is", choice)
@@ -83,6 +132,13 @@ while i<10:
             print("Computer point",cp,"Your Point",hp)
             i += 1
             print("Rounds=", i,"\n")
+            if cp >= 6:
+                  print("Game Over. Computer won")
+                  break
+            elif hp >= 6:
+                  print("Hurray!!! You won")
+                  break
+
 
       elif choice=="Scissor" and in1==1:
             print("Computer's choice is", choice)
@@ -92,14 +148,12 @@ while i<10:
             print("Computer point",cp,"Your Point",hp)
             i += 1
             print("Rounds=", i,"\n")
-
-      elif cp>=6 :
+      if cp >= 6:
             print("Game Over. Computer won")
             break
-      elif hp>=6:
+      elif hp >= 6:
             print("Hurray!!! You won")
             break
-
 
 if hp>cp:
       print("Hurray!!! You won the game\n")
