@@ -160,3 +160,5 @@ if hp>cp:
 
 elif cp>hp:
       print("Computer won the game\n")
+elif cp==hp:
+      print("Ohh noo!!! There is a tie\n")
