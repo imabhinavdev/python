@@ -72,7 +72,7 @@ def hms():
         elif in6==3 and in2==2:
             with open("rahuld.txt") as x:
                 y=x.read()
-                print(y)
+                print(y) 
 hms()
 in7=int(input("Do you want to repeat?\n Press\n1.Yes\n2.No\n"))
 if in7==1:
