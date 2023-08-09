@@ -1,3 +1,8 @@
+## Table of Contents
+1. [Variables](#variables)
+2. [Data Types](#data-types)
+3. [Operatos](#operators)
+
 # Variables
 1. Only alphabets and digits
 2. only one special symbol ' _ '
@@ -232,3 +237,56 @@ print(id(t))
 # (1, 2, 3, 4, 5, 6)
 # 2625482882688
 ```
+---
+### Dictionary & Set
+* Key value pair
+* Mutuable datatype
+```
+dict={'key':'value'}
+```
+
+```
+dict={'key':'value'}
+d={}
+print(type(d))
+
+q=set()
+print(type(q))
+q={1,2,3,4,5}
+
+#<class 'dict'>
+#<class 'set'> 
+```
+```
+d={'1':'Abhinav Singh'}
+a={(1,2,3,4):'Abhinav'}
+print(a)
+```
+
+```
+d={'1':'Abhinav Singh'}
+a={(1,2,3,4):'Abhinav'}
+print(a.keys())
+print(a.values())
+print(a.items())
+```
+
+```
+d={'data':[1,2,3,4],'name':'Abhinav','age':20}
+for keys,value in d.items():
+    print(keys,value)
+
+#data [1, 2, 3, 4]
+#name Abhinav
+#age 20
+```
+
+# Operators
+1. Arithmetic
+2. Relational or Comparision
+3. Logical
+4. Bitwise
+5. Assignment
+6. Special Operator
+
+### Arithmetic
