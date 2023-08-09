@@ -13,6 +13,7 @@ int, float, complex, bool, str
 tuples, list, dictionary, set, frozen, range, None
 
 ## Notes
+[Anaconda Download](https://www.anaconda.com/download)
 > **id** is a funtion which returns address of the variable and **type** is a function which return the type of variable
 
 >**typeconvert** and **typecoersion** are the same thing.
@@ -76,6 +77,8 @@ Python don't have anything like pointer but everything works on pointer only!
 x='Rahul;
 for i in x:
     print(id(i))
+
+#Console:
 # Prints many address.    
 ```
 ---
@@ -92,6 +95,7 @@ x="10.5"
 y=int(x)
 print(y)
 
+#Console:
 # Literal Error/ Value Error Here
 ```
 ```
@@ -99,6 +103,7 @@ x="10"
 y=int(x)
 print(y)
 
+#Console:
 # No Literal Error/ Value Error Here
 ```
 
@@ -131,6 +136,7 @@ x=range(1,10)
 print(type(x))
 print(list(x))
 
+#Console:
 #<class 'range'>
 #[1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
@@ -138,6 +144,7 @@ print(list(x))
 x=None
 print(type(x))
 
+#Console:
 #<class 'NoneType'>
 ```
 
@@ -146,5 +153,82 @@ x=None
 x=5
 print(x)
 
+#Console:
 #5
+```
+## Advanced DataTypes
+
+### List
+* List is container type of data type which contain **homo** or **non homogenious** data.
+* It preserves the order of insertion and
+* It support indexing
+* It supports slicing
+* It has a  growing nature means it is mutable.
+```
+l=[]
+print(type(l))
+
+#Console:
+#class <list>
+```
+
+```
+list1=[1,2,3,4,[5,6,7,['a','b']],{'name':'abhinav'}]
+print((list1))
+
+#Console:
+#[1, 2, 3, 4, [5, 6, 7, ['a', 'b']], {'name': 'abhinav'}]
+```
+
+> In Python, indexing always starts with **0**.
+
+```
+list1=[1,2,3,4,[5,6,7,['a','b','c']],{'name':'abhinav'}]
+
+print(list1[4][3][2])
+
+#Console
+#c
+```
+---
+### Tuple
+* It is a immutable list.
+```
+l=[1,2,3,4]
+l.append(5)
+print(l)
+
+# [1, 2, 3, 4, 5]
+
+t=(1,2,3,4)
+t.append(5)
+print(t)
+
+# Cannot append Error Attribute Error
+```
+``If a tupple has only one integer, it should be separated be commma , ``
+```
+l=[]
+print(type(l))  # <class 'list'>
+t=()
+print(type(t))  # <class 'tuple'>
+t=(1)
+print(type(t))  # <class 'int'>
+t=(1,)
+print(type(t))  # <class 'tuple'>
+```
+
+``Mutability is changing of data on the same address as previous``
+>Tuple is mutable using new memory address
+```
+t=(1,2,3,4)
+t1=(5,6)
+print(id(t))
+t=t+t1
+print(t)
+print(id(t))
+
+# 2625484955360
+# (1, 2, 3, 4, 5, 6)
+# 2625482882688
 ```
