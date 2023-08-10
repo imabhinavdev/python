@@ -290,3 +290,140 @@ for keys,value in d.items():
 6. Special Operator
 
 ### Arithmetic
+1. Addition (+)
+2. Subtraction(-)
+3. Division(/)
+4. Multiplication(*)
+5. Modulus(%)
+6. #### Floor Division Operator
+```
+a=5
+b=2
+c=a//b
+print(c)
+```
+If any number is *float* and we are doing floor division then the result is also a *float* number
+```
+a=5.0
+b=2
+c=a//b
+print(c)
+```
+7. #### Power Operator/ Exponential operator
+```
+a=3
+b=a**2
+print(b)
+```
+
+### Operators in String
+```
+s1="abhinav"
+s2="Singh"
+print(s1+s2)
+```
+```
+s1="abhinav"
+s2="Singh"
+print(s1+s2*2)
+```
+---
+### Relational Operator
+1. Greater Than
+2. Less Than
+3. Equal
+4. Greater equal to
+5. Less equal to
+
+>Only equal to operator does not take care of datatype, otherwise there will be a ***TypeError***
+```
+print(10>"abhi")
+
+#TypeError
+```
+---
+### Logical Operators
+1. and
+2. or
+3. not
+
+#### AND
+If we are working with integer, first part is ***false*** or ***0*** means it is evaluated as ***false*** the output is the ***right*** part 
+#### OR
+If we are working with integer, first part is ***true*** or ***1*** means it is evaluated as ***true*** the output is the ***left*** part 
+
+>x and y <br>
+>If x is evaluated as ***false*** return x, otherwise return >y as the answer.
+
+>x or y<br>
+>If x is evaluted as ***True***, return x as the answer
+
+``The python virtual machine always returns a string in single quotes '' ``
+
+>**Zero Division Error** : when anything is divided by 0.
+---
+### Bitwise Operator
+&, /, >>, <<
+
+### Assignment operator
+1. Normal Assignment
+```
+x=10
+```
+2. Compound Assignment
+```
+x+=10
+```
+``In  python, there is no ternary operator !``
+
+### Special Operators
+1. **Identity operators** (is and is not). Mainly for address com.
+```
+a=10
+b=10
+print(a is b)
+print(a is not b)
+```
+2. **Membership** (in and not in to check membership)
+```
+s="Abhinav"
+print('b' in s)
+```
+```
+d={1:'abhinav',2:"Singh"}
+print(2 in d)
+print("Abhinav" in d.values())
+```
+### Operator Precedence Image
+![Precedence](image.png)
+
+# Input and Output
+### Input
+```
+x=input("Enter data: ")
+print(x)
+```
+
+Multiple Input in Python can be done using ***split*** method.
+
+`` Split function returns the list of characters ``
+
+```
+x=input("Enter data: ")
+l=x.split(',')
+print(type(l))
+sum=0 
+for i in l:
+    sum+=int(i)
+print(sum)
+```
+#### List Comprehension
+```
+x=[int(i) for i in input("Enter data: ").split(',')]
+```
+---
+### Command Line Arguments
+sys is a built-in module in python that contains a variable that is argv
+```
+print(type(argv))
+```
