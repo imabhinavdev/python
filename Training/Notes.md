@@ -386,13 +386,13 @@ print(a is not b)
 ```
 2. **Membership** (in and not in to check membership)
 ```
-s="Abhinav"
+s="abhinav"
 print('b' in s)
 ```
 ```
-d={1:'abhinav',2:"Singh"}
+d={1:'abhinav',2:"singh"}
 print(2 in d)
-print("Abhinav" in d.values())
+print("abhinav" in d.values())
 ```
 ### Operator Precedence Image
 ![Precedence](image.png)
@@ -404,9 +404,9 @@ x=input("Enter data: ")
 print(x)
 ```
 
-Multiple Input in Python can be done using ***split*** method.
+Multiple Input in python can be done using ***split*** method.
 
-`` Split function returns the list of characters ``
+`` Split function returns the list of character``
 
 ```
 x=input("Enter data: ")
@@ -423,7 +423,38 @@ x=[int(i) for i in input("Enter data: ").split(',')]
 ```
 ---
 ### Command Line Arguments
-sys is a built-in module in python that contains a variable that is argv
+sys is built-in module in python which contain a variable that is argv
 ```
 print(type(argv))
+```
+
+#### Unpacking
+```
+a,b=input("Enter data").split(',')
+```
+
+### Separator attribute
+```
+
+print("abhinav","Singh",sep=",")
+
+print("Abhinav",end=' ')
+print("Singh")
+```
+
+### Print Formatted String
+```
+a,b,c,d=10,11.5,"Abhinav",{1:"Singh"}
+print("It is an integer %i or %d"%(a,a))
+print("It is an float %f"%(b))
+print("It is an string %s"%(c))
+print("It is an string %s"%(d))
+```
+
+### Format Method (f string)
+```
+a="Abhinav"
+b="Singh"
+print("{0} and {1}".format(a,b))
+print(f"{a} and {b}")
 ```
