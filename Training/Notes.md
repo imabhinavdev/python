@@ -1,4 +1,5 @@
-# By Dr. Rahul Dubey
+# By Dr. Rahul Dubey (HOD- CSE | SISTec)
+# Assistant Prof: Amit Swami Sir 
 ## Table of Contents
 
 1. [Variables](#variables)
