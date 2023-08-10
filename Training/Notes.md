@@ -2,6 +2,7 @@
 1. [Variables](#variables)
 2. [Data Types](#data-types)
 3. [Operatos](#operators)
+4. [Input and Output](#input-and-output)
 
 # Variables
 1. Only alphabets and digits
