@@ -572,8 +572,6 @@ Back Direction
 s ="Learning Python is very very easy!!!"
 print(len(s))
 print(s[1:7:1])
-print(s[1:7])
-print(s[1:7:2])
 print(s[:7])
 print(s[7:])
 print(s[7:10000000000000000000000000])
@@ -587,17 +585,105 @@ print(s[::-1])
 print(s[3:7:-1])
 print(s[7:4:-1])
 print(s[0:10000:1])
-print(s[-4:1:-1])
-print(s[-4:8:-1])
-print(s[-4:8:-1])
-print(s[-4:1:-2])
-print(s[5:0:1])
-print(s[9:0:0])
-print(s[0:-10:-1])
-print(s[0:-11:-1])
-print(s[0:0:1])
-print(s[0:-9:-2])
-print(s[-5:-9:-2])
-print(s[10:-1:-1])
-print(s[10000:2:-1])
+
+```
+---
+### How to remove the space of string
+#### Strip Function
+1. .strip()
+2. .lstrip()
+3. .rstrip()
+
+``In string there are some functions that are inplace and some are outplace``
+
+```
+x=input()
+print(x)
+removed=x.strip()
+print(removed)
+```
+#### Finding sub string
+1. find 
+```
+l="learning python is easy"
+print(l.find("python"))
+```
+```
+l="learning python is easy"
+print(l.find("python")+len("python")-1)
+```
+>Find function returns **-1** if the sub string is not found!
+```
+l="learning python is easy"
+print(l.find("python")+len("python")-1)
+print(l.find("abhinav"))
+print(l.find("abhinav",0,5))
+```
+2. index (value error exception)
+```
+l="learning python is easy"
+print(l.find("python")+len("python")-1)
+print(l.find("abhinav"))
+print(l.find("abhinav",0,5))
+print(l.index("python",0,5))
+```
+
+#### Replace Function
+```
+s="learning python is every easy"
+print(s.replace("pyhton","html"))
+```
+
+#### Join function (Most Important method)
+The container should be always the collection of string.
+```
+l=[1,2,3,4,5]
+n=len(l)
+print(l[n-1])
+for i in l:
+    if i==l[n-1]:
+        print(i)
+    else:
+        print(i,end=",")
+```
+
+```
+l=['1','2']
+sep=",".join(l)
+print(sep)
+```
+
+```
+#Write a program to remove duplicate element from list
+inp=input("Enter the data ").split()
+l1=[]
+for i in inp:
+    if i not in l1:
+        l1.append(i)
+
+print(l1)
+
+```
+
+### Case Changing Methods
+1. upper()To convert all characters to upper case<br>
+2. lower()  To convert all characters to lower case<br>
+3. swapcase()  Converts all lower case characters to upper case and all upper case
+characters to lower case<br>
+4. title()  To convert all character to title case. i.e first character in every word should
+be upper case and all remaining characters should be in lower case.<br>
+5. capitalize()  Only first character will be converted to upper case and all remaining
+characters can be converted to lower case
+6. isalnum(): Returns True if all characters are alphanumeric( a to z , A to Z ,0 to9 )
+7. isalpha(): Returns True if all characters are only alphabet symbols(a to z,A to Z)
+8. isdigit(): Returns True if all characters are digits only( 0 to 9)
+9. islower(): Returns True if all characters are lower case alphabet symbols
+10. isupper(): Returns True if all characters are upper case aplhabet symbols
+11. istitle(): Returns True if string is in title case
+12. isspace(): Returns True if string contains only spaces
+
+```
+s=input("enter string ")
+print(s[::-1])
+print("".join(reversed(s)))
 ```
