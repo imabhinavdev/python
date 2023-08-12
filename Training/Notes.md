@@ -6,6 +6,7 @@
 2. [Data Types](#data-types)
 3. [Operatos](#operators)
 4. [Input and Output](#input-and-output)
+5. [Flow Control](#flow-control)
 
 # Variables
 1. Only alphabets and digits
@@ -285,6 +286,8 @@ for keys,value in d.items():
 #age 20
 ```
 
+# Day-2
+
 # Operators
 1. Arithmetic
 2. Relational or Comparision
@@ -320,17 +323,7 @@ b=a**2
 print(b)
 ```
 
-### Operators in String
-```
-s1="abhinav"
-s2="Singh"
-print(s1+s2)
-```
-```
-s1="abhinav"
-s2="Singh"
-print(s1+s2*2)
-```
+
 ---
 ### Relational Operator
 1. Greater Than
@@ -455,10 +448,156 @@ print("It is an string %s"%(c))
 print("It is an string %s"%(d))
 ```
 
-### Format Method (f string)
+### Format Method (f-string)
 ```
 a="Abhinav"
 b="Singh"
 print("{0} and {1}".format(a,b))
 print(f"{a} and {b}")
+```
+# Day-3
+# **Flow Control**
+![Flow Control](image-1.png)
+>The Flow of a program is always sequential
+---
+### Conditional Statements
+1. if
+2. if-elif
+3. if-elif-else
+```
+a=input("enter designation: ")
+if a=="engineer":
+    print("Hello Boss !")
+    
+elif a=="friend":
+    print("Mera Bhai hai tu")
+else:
+    print("Good Morning")
+```
+
+`` There is no pre-increment and post-increment``
+
+---
+### Iterative Statements
+#### 1. FOR
+```
+l=[1,2,3,4,5]
+sum=0
+for _ in l:
+    print(_)
+for _ in range(len(l)):
+    sum+=l[_]
+print("Sum is :",sum)
+```
+#### 2. WHILE 
+```
+inp=int(input("Enter any number: "))
+i=0
+while i<inp:
+    print("The value of i",i)
+    i+=1
+```
+---
+### Transfer Statements
+#### 1. Break
+```
+for i in range(10):
+    if i==5:
+        print("Reached 5")
+        break
+    print(i)
+```
+#### 2. Continue
+```
+for i in range(10):
+    if i==5:
+        print("Reached 5")
+        continue
+    print(i)
+```
+
+#### 3. Pass
+```
+for i in range(10):
+    pass
+```
+
+#### For Else
+```
+cart=[10,20,30,40,100]
+for item in cart:
+    if item>400:
+        print("we cannot process your order")
+        break
+else:
+    print("all orders will be delivered!")
+```
+#### While Else
+```
+cart=[10,20,30,40,100]
+i=0
+while i<len(cart):
+    if cart[i]>40:
+        print("Your order can not be processed!")
+        break
+    i+=1
+else:
+    print("Order will be delivered !")
+```
+
+## String
+String is immutable<br>
+String supports indexing<br>
+String support slicing
+
+
+```
+s1="abhinav"
+s2="Singh"
+print(s1+s2)
+```
+```
+s1="abhinav"
+s2="Singh"
+print(s1+s2*2)
+```
+#### Slicing
+Slicing is in 2 direction<br>
+Forward Direction<br>
+Back Direction
+
+``There is no exception in slicing whether the end is given out of bound``
+
+```
+s ="Learning Python is very very easy!!!"
+print(len(s))
+print(s[1:7:1])
+print(s[1:7])
+print(s[1:7:2])
+print(s[:7])
+print(s[7:])
+print(s[7:10000000000000000000000000])
+print(s[::])
+print(s[:])
+
+s='abcdefghij'
+print(s[1:6:2])
+print(s[::1])
+print(s[::-1])
+print(s[3:7:-1])
+print(s[7:4:-1])
+print(s[0:10000:1])
+print(s[-4:1:-1])
+print(s[-4:8:-1])
+print(s[-4:8:-1])
+print(s[-4:1:-2])
+print(s[5:0:1])
+print(s[9:0:0])
+print(s[0:-10:-1])
+print(s[0:-11:-1])
+print(s[0:0:1])
+print(s[0:-9:-2])
+print(s[-5:-9:-2])
+print(s[10:-1:-1])
+print(s[10000:2:-1])
 ```
