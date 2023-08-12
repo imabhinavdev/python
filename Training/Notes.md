@@ -714,3 +714,69 @@ while (i<len(l)):
     i+=1
 print(" ".join(l1))
 ```
+
+If **input= a4k3b2** then **Output: aeknbd** :
+
+```
+inp=input("Enter string ")
+i=0
+s=''
+for x in inp:
+    if x.isalpha():
+        s+=x
+        previous=ord(x)
+        
+    if x.isdigit():
+        s+=chr(previous+int(x))
+
+
+print(s)
+```
+
+If **input= a1bc2d3** then **Output: abcd123** :
+```
+inp=input("Enter string ")
+i=0
+s=''
+c=''
+for x in inp:
+    if x.isalpha():
+        s+=x
+        previous=ord(x)
+        
+    if x.isdigit():
+        c+=x
+
+s+=c;
+print(s)
+```
+**Input= ABCDABBBCCCDDDFFF <br>
+Output= ABCD**
+```
+s=input("enter string")
+a=''
+for i in s:
+    if i not in a:
+        a+=i
+print(a)
+```
+**Input=e4d1<br>
+output=de14**
+```
+inp=input("Enter string ")
+l1=[]
+l2=[]
+for i in inp:
+    if i.isalpha():
+        l1.append(ord(i))
+    else:
+        l2.append(ord(i))    
+l1=sorted(l1)
+l2=sorted(l2)
+
+final=l1+l2
+st=''
+for i in final:
+    st+=chr(i)
+print(st)
+```
