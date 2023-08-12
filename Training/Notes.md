@@ -1,5 +1,6 @@
 # By Dr. Rahul Dubey (HOD- CSE | SISTec)
 # Assistant Prof: Amit Swami Sir 
+# Notes - Abhinav Singh
 ## Table of Contents
 
 1. [Variables](#variables)
@@ -682,8 +683,34 @@ characters can be converted to lower case
 11. istitle(): Returns True if string is in title case
 12. isspace(): Returns True if string contains only spaces
 
+Program to reverse the string
 ```
 s=input("enter string ")
 print(s[::-1])
 print("".join(reversed(s)))
+```
+ 
+Program to reverse the sentence
+```
+inp=input("Enter string ").split()
+print(" ".join(reversed(inp)))
+```
+Reverse the words in string
+```
+inp=input("Enter string ").split()
+for i in inp:
+    print(i[::-1],end=" ")
+```
+Reverse even words: 
+```
+l=input("Enter string ").split()
+l1=[]
+i=0
+while (i<len(l)):
+    if i%2==0:
+        l1.append(l[i][::-1])
+    else:
+        l1.append(l[i])
+    i+=1
+print(" ".join(l1))
 ```
