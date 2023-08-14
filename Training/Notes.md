@@ -8,6 +8,7 @@
 3. [Operatos](#operators)
 4. [Input and Output](#input-and-output)
 5. [Flow Control](#flow-control)
+6. [String](#string)
 
 # Variables
 1. Only alphabets and digits
@@ -85,7 +86,7 @@ print(x)
 Python don't have anything like pointer but everything works on pointer only!
 
 ```
-x='Rahul';
+x='Rahul;
 for i in x:
     print(id(i))
 
@@ -423,8 +424,7 @@ x=[int(i) for i in input("Enter data: ").split(',')]
 ### Command Line Arguments
 sys is built-in module in python which contain a variable that is argv
 ```
-import sys
-print(type(sys.argv))
+print(type(argv))
 ```
 
 #### Unpacking
@@ -546,7 +546,7 @@ while i<len(cart):
 else:
     print("Order will be delivered !")
 ```
-
+# Day 4
 ## String
 String is immutable<br>
 String supports indexing<br>
