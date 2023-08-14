@@ -1115,3 +1115,9 @@ rec.setdefault('name','arpit')
 rec.setdefault('sname  ','singh')
 print(rec)
 ```
+
+### Dictionary Comprehension
+```
+rec={x:x**2 for x in range(10)}
+print(rec)
+```
