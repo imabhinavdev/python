@@ -85,7 +85,7 @@ print(x)
 Python don't have anything like pointer but everything works on pointer only!
 
 ```
-x='Rahul;
+x='Rahul';
 for i in x:
     print(id(i))
 
@@ -423,7 +423,8 @@ x=[int(i) for i in input("Enter data: ").split(',')]
 ### Command Line Arguments
 sys is built-in module in python which contain a variable that is argv
 ```
-print(type(argv))
+import sys
+print(type(sys.argv))
 ```
 
 #### Unpacking
