@@ -8,7 +8,7 @@
 3. [Operatos](#operators)
 4. [Input and Output](#input-and-output)
 5. [Flow Control](#flow-control)
-6. [String](#string)
+6. [String](#day-4)
 
 # Variables
 1. Only alphabets and digits
