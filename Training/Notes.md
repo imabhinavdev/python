@@ -1059,3 +1059,59 @@ else:
         print("They contain same element")
         
 ```
+
+### Tuple
+Tuple Packing
+```
+a=1,2,3,4
+print(a)
+```
+Tuple can be converted to list and vice versa.
+```
+t=(1,2,4,5)
+l=list(t)
+print(l)
+```
+
+### Tuple Comprehension
+There is no word like **Tuple Comprehension**
+```
+t=(i**2 for i in range(1,10))
+print(t)
+print(type(t))
+
+#<generator object <genexpr> at 0x000001D7428E9220>
+# <class 'generator'>
+```
+
+### Dictionary
+* Dictionary is the key value pair representation
+* duplicates keys are not allowed but values are allowed
+* hetrogenous objects are allowed for both keys and values
+* insertion order is not preserved in dictionary
+* dictionaries are mutuable in nature
+* indexing and slicing are not applicable on dictionary
+* in cpp and java, dictionaries is known as maps
+
+#### del()
+#### get()
+It returns the value but if they key is not present it return None
+
+```
+rec={'name':'abhinav','age':20}
+print(rec.get('name'))
+print(rec.get('f'))
+print(rec.get('f','unkown'))
+rec.pop('name')
+print(rec)
+```
+
+#### setdefault()
+
+
+```
+rec={'name':'abhinav','age':20}
+rec.setdefault('name','arpit')
+rec.setdefault('sname  ','singh')
+print(rec)
+```
