@@ -781,3 +781,281 @@ for i in final:
     st+=chr(i)
 print(st)
 ```
+
+**Input: AABCDD<br>
+Output: A-2,B-1,C-1,D-2**
+```
+s=input("Enter the input data bro:")
+d={}
+for i in s:
+    # d[i]=d.get(i,0)+1
+    if(i in d.keys()):
+        d[i]+=1
+    else:
+        d[i]=1
+# print(d)
+
+for i,j in d.items():
+    if(i!=list(d.keys())[-1]):
+        print("{}-{}".format(i,j),end=",")
+    else:
+        print("{}-{}".format(i,j),end="")
+```
+
+
+```
+s = input("Enter the data : ")
+d = {}
+l = []
+for x in s:
+    if x in d.keys():
+        d[x]=d[x]+1
+    else:
+        d[x]=1
+for k,v in d.items():
+    temp = "{}--{}".format(k,v)
+    l.append(temp)
+
+print(",".join(l))
+```
+
+**Tuple Comprehension in list in loop**
+```
+s=[(1,2),(3,4),(4,5)]
+for k,v in s:
+    print(k,v)
+```
+**Formatting of dictionary with string format method**
+
+```
+person={"name":"Abhinav","age":20}
+print(f"hello {person['name']}, your age is {person['age']}")
+print("hello {name}, your age is {age}".format(**person))
+```
+
+```
+lst=eval(input("enter the list"))
+print(lst)
+print(type(lst))
+```
+
+#### How to create list with **List** Function
+
+#### **len function**
+```
+l=list(range(0,10,2))
+print(len(l))
+print(l[-1])
+```
+
+#### **count function**
+```
+l=[1,1,1,1,1,2,2,2,3,3]
+print(l.count(2))
+```
+---
+### Manipulation of list
+#### append function
+add item at the end of the list
+
+```
+l=[1,1,1,1,1,2,2,2,3,3]
+l.append("abhinav")
+print(l)
+```
+
+#### insert function
+insert item at a specific function
+```
+l=[1,1,1,1,1,2,2,2,3,3]
+l.insert(2,88)
+print(l)
+```
+
+#### extend function
+```
+l=[1,2,3]
+l1=['rahul','dubey']
+l2=l+l1
+l2.extend(l)
+print(l2)
+```
+
+#### Pop Function
+```
+l=[1,2,3]
+l.pop()
+print(l)
+```
+
+```
+l=[1,2,3]
+print(l.pop(1))
+```
+### Ordering of list data
+1. reverse()
+
+```
+l=[1,2,3]
+l.reverse()
+print(l.reverse())# print none because it works inplace
+print(l)
+```
+
+2. sort()
+```
+l=[2,5,7,1,6,4]
+l.sort()
+print(l)
+print(l.sort())# prints none, return nothing, works inplace
+``````
+
+```
+l=['abhinav','singh','aastha']
+l.sort()
+print(l)#prints sorted list
+l=['abhinav','singh','aastha',1,2,3]
+l.sort()
+print(l) # error because string can't be compare with int
+```
+
+By defualt, sort use ascending order <br>
+
+**Descending Order**
+
+```
+l=['abhinav','singh','aastha']
+l.sort(reverse=True)
+print(l)
+```
+
+3. Aliasing and Copy
+
+```
+x=[1,2,3,4]
+y=x
+print(id(x))
+print(id(y))
+y=x[:]
+print(id(x))
+print(id(y))
+```
+
+```
+x=[1,2,3,4]
+y=x
+y.append(5)# it is changing the x also, so it is pointing to data of x only
+print(x)
+print(id(x))
+print(id(y))
+y=x[:]
+print(id(x))
+print(id(y))
+```
+```
+x=[1,2,3,4]
+y=x*3
+print(y)
+```
+
+4. Clear()
+```
+x=[1,2,3,4]
+print(x)
+x.clear()
+print(x)
+```
+---
+#### List Comprehension 
+```
+x=[int(i) for i in input("Enter data: ").split()]
+print(x)
+```
+**Squaring of number in list**
+```
+n=int(input("Enter any number: "))
+l=[i*i for i in range(n)]
+print(l)
+```
+
+write a program to print unique vowels in given string
+
+
+```
+
+st=input('Enter string: ')
+st=st.lower()
+vowels='aeiou'
+l=''
+for i in st:
+    if i in vowels:
+        if i not in l:
+            l+=i
+
+print(l)
+```
+
+Given a list of numbers, return a list where all adjacent equal elements have been reduced to a single element, so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or modify the passed in list.
+```
+list=eval(input("Enter list "))
+print(list)
+li=[]
+for i in list:
+    if len(li)>0:
+        if i!=li[-1]:
+            li.append(i)
+    if len(li)<1:
+        li.append(i)
+
+print(li)
+```
+Selection Sort
+
+```
+arr = [64, 25, 12, 22, 11]
+n = len(arr)    
+for i in range(n - 1):
+    min_index = i
+    
+    for j in range(i + 1, n):
+        if arr[j] < arr[min_index]:
+            min_index = j
+    
+    arr[i], arr[min_index] = arr[min_index], arr[i]
+
+
+print(arr)
+```
+Given two lists sorted in increasing order, create and return a merged list of all the elements in sorted order
+```
+list1=eval(input("Enter list 1 "))
+list2=eval(input("Enter list 1 "))
+list1=sorted(list1)
+list2=sorted(list2)
+list1.extend(list2)
+print(list1)
+list1=sorted(list1)
+print(list1)
+```
+
+Write a program which can generate and print a tuple, where the values are the squares of number between 1 and 20 (both included)
+```
+tup=tuple(i*i for i in range(1,21))
+print(tup)
+```
+
+Write a program to compare two tuple whether they contain same element or not
+```
+tup1=(1,3,5)
+tup2=(5,3,1)
+if len(tup1)!=len(tup2):
+    print("Does not contain same element !")
+else:
+    for i in tup1:
+        if i not in tup2:
+            print("They does not contain same element")
+            break
+    else:
+        print("They contain same element")
+        
+```
