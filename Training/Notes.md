@@ -1338,3 +1338,30 @@ def freq(tup):
 
 print(freq(tup))
 ```
+
+
+## Types of arguments
+#### 1. postional
+```
+def wish(name,msg):
+    print(f"hello {name}, {msg}")
+
+wish("Abhinav","Jai shree ram")# positional
+```
+#### 2. default
+
+```
+def wish(msg,name='rahul'):
+    print(f"hello {name}, {msg}")
+
+wish(msg="hello")
+```
+`` Default argument should be used last``
+
+#### 3. variable 
+```
+def wish(name,msg):
+    print(f"hello {name}, {msg}")
+
+wish(msg="Jai shree ram",name="Abhinav")# keyword argument
+```
