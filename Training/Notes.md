@@ -9,7 +9,9 @@
 4. [Input and Output](#input-and-output)
 5. [Flow Control](#flow-control)
 6. [String](#day-4)
-
+# Day 1
+History and basic of python
+# Day 2
 # Variables
 1. Only alphabets and digits
 2. only one special symbol ' _ '
@@ -86,7 +88,7 @@ print(x)
 Python don't have anything like pointer but everything works on pointer only!
 
 ```
-x='Rahul;
+x='Rahul';
 for i in x:
     print(id(i))
 
@@ -288,7 +290,7 @@ for keys,value in d.items():
 #age 20
 ```
 
-# Day-2
+# Day-3
 
 # Operators
 1. Arithmetic
@@ -457,7 +459,7 @@ b="Singh"
 print("{0} and {1}".format(a,b))
 print(f"{a} and {b}")
 ```
-# Day-3
+# Day-4
 # **Flow Control**
 ![Flow Control](image-1.png)
 >The Flow of a program is always sequential
@@ -546,7 +548,7 @@ while i<len(cart):
 else:
     print("Order will be delivered !")
 ```
-# Day 4
+# Day 5
 ## String
 String is immutable<br>
 String supports indexing<br>
@@ -1120,4 +1122,219 @@ print(rec)
 ```
 rec={x:x**2 for x in range(10)}
 print(rec)
+```
+# Day 7 (16/8/23)
+Sum of values in Dictionary
+```
+inp=eval(input("enter the "))
+print(type(inp))
+sum=0
+for i in inp.values():
+    sum+=i
+
+print(sum)
+
+```
+
+wap to accept name and marks from the keybpard and create the dictionary
+```
+dict={}
+while True:
+    nme=input('Enter the name: ')
+    if nme=='E':
+        break
+    marks=int(input('Enter the marks '))
+    dict.setdefault(nme,marks)
+
+while True:
+    name=input("enter the name to check ")
+    if name=='E':
+        break
+    print(dict[name])
+
+```
+
+
+```
+s = list(range(11, 1000))
+count = 0
+
+for i in s:
+    if i % 2 == 0:
+        continue
+    else:
+        check = True
+        digits_seen = set()
+        
+        for j in str(i):
+            if j in digits_seen:
+                check = False
+                break
+            digits_seen.add(j)
+        
+        if check:
+            # print(i)
+            count += 1
+
+print(count)
+```
+
+
+### Set
+* Set only contains unique value
+* Insertion order is not preserved.
+* can sort the set
+* Indexing and slicing are not allowed
+* Set objects are mutable
+
+---
+```
+s={1,2,3,4}
+print(type(s))
+a={}
+print(type(a))
+a=set()
+print(type(a))
+```
+
+#### Add()
+add the elements in set
+```
+s={1,2,3,4}
+print(type(s))
+s.add(40)
+print(s)
+```
+#### union() & intersion()
+```
+x={1,2,3}
+y={6,7,8}
+print(x.union(y))
+print(x.intersection(y))
+```
+---
+### Set Comprehension
+```
+x={x*x for x in range(5)}
+print(x)
+```
+Unique vowels in a word
+```
+inp=input("Enter word")
+vowel={'a','e','i','o','u'}
+x=set(inp)
+print(x.intersection(vowel))
+
+```
+Frozen Set are not mutable
+```
+inp=input("Enter word")
+vowel={'a','e','i','o','u'}
+x=frozenset(inp)
+# x.add('u')
+print(x.intersection(vowel))
+
+```
+
+## Functions
+
+* Function is a block of code
+* Used for reuability
+* Function is of 2 types: 
+    1. User Defined
+    2. built-in
+* mandatory keywords:
+    * def keyword
+    * return keyword(optional)
+
+
+```
+def funName(para):
+    """ This is a function"""
+
+
+funName(5) #function calling
+print(type(funName))
+print(funName)
+
+```
+
+```
+def hello():
+    print("hello")
+
+hello()
+```
+```
+def hello():
+    print("hello")
+
+print(hello())
+print(hello)
+```
+
+Function to add two numbers
+```
+def add(a,b):
+    return a+b
+
+print(add(5,6))
+```
+
+``In Python, parameter and arguments are same but passing parameter at function calling is **actual argument** and function accepting it is known as **formal argument**``
+
+```
+def calc(x,y):
+    return x+y, x-y, x*y, x/y
+
+
+print(calc(1,2))
+print(type(calc(1,2)))
+```
+
+Write a function to find the maximum and minimum numbers from a sequence of numbers.
+```
+list=[1,5,9,4,2]
+def minMax(para):
+    para.sort()
+    return min(para) ,max(list)
+
+print(minMax(list))
+```
+
+Write a function to generate Fibonacci series for the number input by user. (note implement without recursion)
+
+```
+def fibonacci(n):
+    list=[1]
+    prev=0
+    now=1
+    for i in range(n):
+        list.append(prev+now)
+        temp=now
+        now=prev+now
+        prev=temp
+        
+    print(list)
+
+
+fibonacci(6)
+```
+
+Write a function which takes a tuple of integer’s values and return a dictionary who’s each item is a pair of integer’s values and its frequency.
+```
+tup=(1,2,3,4,5,1,2,1)
+
+def freq(tup):
+    dict={}
+    for i in tup:
+        if i in dict.keys():
+            dict[i]=dict[i]+1
+        else:
+            dict.setdefault(i,1)
+
+    return dict
+
+
+print(freq(tup))
 ```
