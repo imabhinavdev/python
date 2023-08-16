@@ -9,6 +9,8 @@
 4. [Input and Output](#input-and-output)
 5. [Flow Control](#flow-control)
 6. [String](#day-4)
+7. [Day 5](#day-5)
+7. [Day 7](#day-7)
 # Day 1
 History and basic of python
 # Day 2
@@ -1360,8 +1362,39 @@ wish(msg="hello")
 
 #### 3. variable 
 ```
+def fun1(*n):
+    print(type(n))
+    print(n)
+    sum=0
+    for i in n:
+        sum+=i
+    print(sum)
+
+
+
+fun1(1,2,3)
+fun1(1,2,3,4,5,6)
+fun1(1,2,3,4,5,6,7,8,9)
+```
+#### 4. keyword
+```
 def wish(name,msg):
     print(f"hello {name}, {msg}")
 
 wish(msg="Jai shree ram",name="Abhinav")# keyword argument
 ```
+
+``There is nothig like function overloading in python`` 
+
+#### 5. keyword variable length argument
+```
+def fun1(**n):
+    print(type(n))
+    print(n)
+
+fun1(name='Abhinav',sname='Singh')
+```
+
+
+
+
