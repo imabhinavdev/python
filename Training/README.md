@@ -398,7 +398,7 @@ print(2 in d)
 print("abhinav" in d.values())
 ```
 ### Operator Precedence Image
-![Precedence](image.png)
+![Precedence](images/image.png)
 
 # Input and Output
 ### Input
@@ -463,7 +463,7 @@ print(f"{a} and {b}")
 ```
 # Day-4
 # **Flow Control**
-![Flow Control](image-1.png)
+![Flow Control](images/image-1.png)
 >The Flow of a program is always sequential
 ---
 ### Conditional Statements
@@ -1283,7 +1283,7 @@ def add(a,b):
 print(add(5,6))
 ```
 
-``In Python, parameter and arguments are same but passing parameter at function calling is **actual argument** and function accepting it is known as **formal argument**``
+``In Python, parameter and arguments are same but passing parameter at function calling is actual argument and function accepting it is known as formal argument``
 
 ```python
 def calc(x,y):
@@ -1664,9 +1664,184 @@ def outer(hello):
             hello(situation)
     
     return inner
-@outer
+@outer#adding decor constraints
 def hello(situation):
     print(f"hello {situation}")
 
 hello("abhinav")
+```
+
+### Decorator Chaining
+```python
+def decor1(func):
+    def inner():
+        x=func()
+        return x*x
+    return inner
+
+def decor(func):
+    def inner():
+        x=func()
+        return x*2
+    return inner
+
+@decor1# Adding decorator constraints to the num function
+@decor# Adding decorator constraints to the num function
+def num():
+    return 10
+
+print(num())
+```
+
+### Generator Function
+* it uses ***yield*** function
+```python
+def mygen():
+    yield 'A'
+    yield 'B'
+    yield 'C'
+
+print(type(mygen))
+g=mygen()
+print(next(g))#A
+print(next(g))#B
+print(next(g))#C
+print(next(g))# StopIteration Error
+```
+**Fake Data Generation**
+```python
+# fake data generation
+import random,time
+names=['rahul','vasu','gaurang','divyanshu','ayush']
+subjects=['hidni','english','maths','science']
+def peop_list(num): 
+    result=[]
+    for i in range(num):
+        person={'id':i,'name':random.choice(names),'subjects':random.choice(subjects)}
+        result.append(person)
+    def peop_gen(num):
+        for i in range(num):
+            person={'id':i,'name':random.choice(names),'subjects':random.choice(subjects)}
+    yield(person)
+
+t1=time.clock()
+peop_list(100)
+t2=time.clock()
+print("time take by normal:",t2-t1)
+t3=time.clock()
+peop_gen(100)
+t4=time.clock()
+print("time take by gen:",t4-t3)
+```
+
+# Day-9 (18/8/23)
+# Module 
+* A group of function, classes and variables
+* It is nothing more than **.py** files.
+
+moduleDemo file 
+```python
+def add(a,b):
+    print("the sum is ",a+b)
+```
+```python
+from modules import moduleDemo
+moduleDemo.add(5,6)
+print(dir(mD))
+```
+## Module Aliasing or Module Renaming or various ways to import
+
+```python
+from modules import moduleDemo as mD ****# Module Aliasing using *as*
+mD.add(5,6)
+
+print(dir(mD))
+```
+```python
+from modules import moduleDemo as mD # Module Aliasing using *as*
+mD.add(5,6)
+moduleDemo.add(5,6) # Will show an error
+print(dir(mD))
+```
+
+```python
+from moduleDemo import *
+add(5,6)
+```
+Import more than 1 modules
+moduleDemo2
+```python
+def mul(a,b):
+    print("the sum is ",a*b)
+```
+```python
+import moduleDemo as a, moduleDemo2 as m
+
+a.add(5,6)
+m.mul(5,6)
+```
+```python
+from moduleDemo import add as a
+a(5,6)
+```
+> In Python, there is one **special** variable (***magic*** variables), **\_\_name\_\_**. This variable store the data whether the program executed individually or in some other module.
+> If program executed individually, the stored value will be **\_\_main\_\_** otherwise
+> ot will contain the name of module where it is defined
+
+# File Handling
+* Text File
+* Binary Files(images,audio,video,etc)
+![Alt text](images/FileModes.png)
+### Opening and Closing files in Python
+#### Modes for opening file:
+- r - read only (default mode). The pointer starts at beginning of the file.
+  
+f.name - return file name
+f.mode - returns access mode with which file was opened
+f.closed - True if closed else False
+f.readable - True if reading mode is present
+or both modes are present
+f.writable - True if writing mode is present or both modes are present
+#### Write Mode
+```python
+f=open("text.txt",'w')
+print("Name is ",f.name)
+print("Readable is ",f.readable())
+print("writable is ",f.writable())
+print("closed is ",f.closed)
+print("mode is ",f.mode)
+```
+
+#### Read Mode
+```python
+f=open("text.txt",'r')
+print(f.read())
+print(f.read())# will not print anything
+f.seek(0)# takes cursor to a specific index by default 0
+print(f.read())
+```
+
+```python
+f=open("text.txt",'r')
+print(f.readlines())
+```
+
+```python
+f=open("text.txt",'r')
+lst=f.readlines()
+for i in lst:
+    print(i)
+```
+
+```python
+l=[]
+with open ("text.txt",'r+') as f:
+    for i in f:
+        l.append(str(i).replace("STUPID","Good"))
+    f.truncate(0)
+    f.seek(0)
+    f.writelines(l)
+    print("Data saved successfully")
+
+print(f.closed)
 ```
