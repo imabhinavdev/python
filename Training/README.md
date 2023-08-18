@@ -402,10 +402,10 @@ print("abhinav" in d.values())
 
 # Input and Output
 ### Input
-```
+```python
 x=input("Enter data: ")
 print(x)
-```python
+```
 
 Multiple Input in python can be done using ***split*** method.
 
