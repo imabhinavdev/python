@@ -18,4 +18,4 @@ Welcome to my GitHub repository! This repository contains various folders with e
 
 1. **Clone the Repository**: To get started, clone this repository to your local machine using the following command:
    ```bash
-   git clone https://github.com/YourUsername/YourRepository.git
+   git clone https://github.com/madabhi/Python.git
