@@ -1,4 +1,7 @@
-# My GitHub Repository
+# Abhinav Singh Repo 
+**Follow me on GitHub** 
+[![Follow me on GitHub](https://img.shields.io/github/followers/madabhi?style=social)](https://github.com/madabhi)
+
 
 Welcome to my GitHub repository! This repository contains various folders with educational materials related to programming and Object-Oriented Programming (OOP) in Python. Whether you're learning Python, programming concepts, or exploring OOP principles, you'll find valuable resources here.
 
