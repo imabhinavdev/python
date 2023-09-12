@@ -36,4 +36,3 @@ Welcome to my GitHub repository! This repository contains various folders with e
    ```bash
    git clone https://github.com/madabhi/python.git
    ```
-</body>
