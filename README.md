@@ -1,5 +1,3 @@
-<title>Abhinav Singh</title>
-
 # Abhinav Singh Repo 
 **Follow me on GitHub** 
 [![Follow me on GitHub](https://img.shields.io/github/followers/madabhi?style=social)](https://github.com/madabhi)
