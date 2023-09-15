@@ -10,23 +10,23 @@ Welcome to my GitHub repository! This repository contains various folders with e
 ### [Training](Training/)
 - This folder contains a collection of notes and Python code examples. You can explore topics related to Python programming, data science, algorithms, and more. 
 
-   [Explore Training Folder]([Training/](https://github.com/madabhi/python/tree/master/Training))
+   [Explore Training Folder](https://github.com/madabhi/python/tree/master/Training)
 
 ### [Object Oriented Programming](Object%20Oriented%20Programming/)
 - In this folder, you'll find comprehensive class notes on Object-Oriented Programming (OOP) in Python. The notes cover fundamental OOP concepts, practical examples, and code samples to help you master Python's object-oriented capabilities.
 
-   [Explore OOP Folder]([Object%20Oriented%20Programming/](https://github.com/madabhi/python/tree/master/Object%20Oriented%20Programming))
+   [Explore OOP Folder](https://github.com/madabhi/python/tree/master/Object%20Oriented%20Programming)
   
 ### [numpy](Pattern%20Module/numpy/)
 - This folder contains a collection of notes and Python code examples related to NumPy, a powerful library for numerical computing in Python. You can explore topics such as array manipulation, mathematical operations, and data analysis using NumPy.
 
-   [Explore numpy Folder]([Pattern%20Module/numpy/](https://github.com/madabhi/python/tree/master/Pattern%20Module/numpy))
+   [Explore numpy Folder](https://github.com/madabhi/python/tree/master/Pattern%20Module/numpy)
 
 
 ### [pandas](Pattern%20Module/pandas/)
 - This folder contains a collection of notes and Python code examples related to pandas, a popular library for data manipulation and analysis in Python. You can explore topics such as data loading, cleaning, transformation, and analysis using pandas.
 
-   [Explore pandas Folder]([Pattern%20Module/pandas/](https://github.com/madabhi/python/tree/master/Pattern%20Module/pandas))
+   [Explore pandas Folder](https://github.com/madabhi/python/tree/master/Pattern%20Module/pandas)
 
 
 ## Getting Started
