@@ -1,7 +1,3 @@
-```python
-%config IPCompleter.greedy=True
-```
-
 # Object Oriented Programming (29/8/23)
 
 * In python everything is object
