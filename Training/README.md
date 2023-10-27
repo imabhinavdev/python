@@ -1,5 +1,3 @@
-# By Dr. Rahul Dubey (HOD- CSE | SISTec)
-# Assistant Prof: Amit Swami Sir 
 # Notes - Abhinav Singh
 ## Table of Contents
 
