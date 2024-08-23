@@ -1,4 +1,5 @@
 # Notes - Abhinav Singh
+## Taught by Dr Rahul Dubey Sir
 ## Table of Contents
 
 1. [Variables](#variables)
